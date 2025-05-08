@@ -50,8 +50,8 @@ SRUN_ARGS=" \
 clear; srun $SRUN_ARGS --jobid $SLURM_JOBID singularity exec -B /gpfs/projects/bsc70 \
     -B /gpfs/scratch/bsc70 \
     -B /gpfs/home/bsc/bsc070997/opt/nvidia/nsight-systems/2024.7.1:/nsys-home \
-    -B /:/ \
-    --nv /gpfs/projects/bsc70/hpai/storage/data/heka/singularity/axolotl/axo_16_deep0151.sif bash -c ¨cd /workspace/Pai-Megatron-Patch/toolkits/model_checkpoints_convertor/mistral \
+    -B /:/workspace/Pai-Megatron-Patch/ \
+    --nv /gpfs/projects/bsc70/hpai/storage/data/heka/singularity/pai_megatron/pai-megatron-patch_25.02.sif bash -c "cd /workspace/Pai-Megatron-Patch/toolkits/model_checkpoints_convertor/mistral; \
     sh hf2mcore_convertor.sh \
     8x7B \
     /gpfs/projects/bsc70/hpai/storage/data/heka/pai_megatron/mistral-ckpts/Mixtral-8x7B-v0.1 \
@@ -65,7 +65,7 @@ clear; srun $SRUN_ARGS --jobid $SLURM_JOBID singularity exec -B /gpfs/projects/b
     2  \
     4 \
     false \
-    16¨
+    16"
 
 echo "END TIME: $(date)"  
 # relaunch
