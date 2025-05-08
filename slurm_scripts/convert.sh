@@ -2,14 +2,14 @@
 #SBATCH -J pai_megatron
 #SBATCH --exclusive
 #SBATCH --account=bsc70
-#SBATCH --qos=acc_debug
+#SBATCH --qos=gp_debug
 #SBATCH --output=slurm_output/out.txt
 #SBATCH --error=slurm_output/err.txt
 #SBATCH --nodes=4
 #SBATCH --time=02:00:00
-#SBATCH --gres=gpu:4
-#SBATCH --cpus-per-task=20
-#SBATCH --ntasks-per-node=1
+#SBATCH --constraint=highmem
+
+
 
 export SLURM_CPU_BIND=none
 export SRUN_CPUS_PER_TASK=${SLURM_CPUS_PER_TASK}
