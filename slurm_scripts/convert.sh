@@ -8,7 +8,8 @@
 #SBATCH --nodes=1
 #SBATCH --time=02:00:00
 #SBATCH --constraint=highmem
-
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=112
 
 
 export SLURM_CPU_BIND=none
