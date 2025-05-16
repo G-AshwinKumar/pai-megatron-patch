@@ -61,5 +61,4 @@ clear; srun $SRUN_ARGS --jobid $SLURM_JOBID singularity exec -B /gpfs/projects/b
     true \
     bf16"
 
-echo "END TIME: $(date)"  
-#rerelaunch
+echo "END TIME: $(date)"
