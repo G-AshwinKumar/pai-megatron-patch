@@ -53,7 +53,7 @@ clear; srun $SRUN_ARGS --jobid $SLURM_JOBID singularity exec -B /gpfs/projects/b
     -B /gpfs/home/bsc/bsc070997/opt/nvidia/nsight-systems/2024.7.1:/nsys-home \
     -B $PWD:/workspace/Pai-Megatron-Patch/ \
     --nv /gpfs/projects/bsc70/hpai/storage/data/heka/singularity/pai_megatron/pai-megatron-patch_25.02.sif bash -c "cd /workspace/Pai-Megatron-Patch/toolkits/distributed_checkpoints_convertor; \
-    sh scripts/qwen3/run_4xH100.sh \
+    bash scripts/qwen3/run_4xH100.sh \
     A3B \
     /gpfs/projects/bsc70/hpai/storage/data/heka/pai_megatron/qwen-ckpts/Qwen3-30B-A3B-Base \
     /gpfs/projects/bsc70/hpai/storage/data/heka/pai_megatron/qwen-ckpts/Qwen3-30B-A3B-Base-to-mcore \
